@@ -11,7 +11,13 @@
 #SBATCH --time=00:10:00             # Set a time limit (10 minutes)
 #SBATCH --mem=16G                    # Request 16GB of memory per node
 
-module restore dsi2025
+module use /opt/nvidia/hpc_sdk/modulefiles
+module load nvhpc-hpcx-cuda12/24.5
+
+# You can use the following command to save the current module environment to a file
+# module save dsi2025       # This will save the current module environment to $HOME/.lmod.d/dsi2025
+# Then you can simply restore your module environment using:
+# module restore dsi2025
 
 source /etc/profile.d/conda.sh
 
