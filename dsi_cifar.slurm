@@ -9,8 +9,10 @@
 #SBATCH --output=dsi_cifar-%j.out
 #SBATCH --error=dsi_cifar-%j.err
 #SBATCH --time=00:10:00             # Set a time limit (10 minutes)
-#SBATCH --mem=16G                    # Request 16GB of memory per node
+#SBATCH --mem=16G                   # Request 16GB of memory per node
 
+# Load the necessary modules (in this case, for CUDA 12.4)
+# Check with: nvcc –version
 module use /opt/nvidia/hpc_sdk/modulefiles
 module load nvhpc-hpcx-cuda12/24.5
 
