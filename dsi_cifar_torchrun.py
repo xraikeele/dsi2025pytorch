@@ -30,7 +30,7 @@ CLASSES = 10
 
 MODEL_NAME = 'resnet50d'
 
-datadir = Path('/home/xrai/shared/')
+datadir = Path('/home/dsi2025/cifar10/')
 
 transform = transforms.Compose([
     transforms.ToTensor(),
